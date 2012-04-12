@@ -3,9 +3,6 @@
  Abstract: CrumbPath is an MKOverlay model class representing a path that changes over time. 
   Version: 1.5 
   
-  
- Copyright (C) 2011 Apple Inc. All Rights Reserved. 
-  
  */
 
 #import "CrumbPath.h"
