@@ -24,6 +24,7 @@
 		85BDCEB615374B8300772391 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BDCEB515374B8300772391 /* CoreLocation.framework */; };
 		85BDCEBC15374C5500772391 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BDCEB915374C5500772391 /* CrumbPath.m */; };
 		85BDCEBD15374C5500772391 /* CrumbPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BDCEBB15374C5500772391 /* CrumbPathView.m */; };
+		85DC05B5153766C0007BB8BE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC05B4153766C0007BB8BE /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,7 @@
 		85BDCE9C1537472100772391 /* RaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaceViewController.m; sourceTree = "<group>"; };
 		85BDCE9E1537472100772391 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		85BDCEA01537472100772391 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		85BDCEA21537472100772391 /* SettingsViewController.h */ = {isa = PBXFileReference; path = SettingsViewController.h; sourceTree = "<group>"; };
+		85BDCEA21537472100772391 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		85BDCEA31537472100772391 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		85BDCEA51537472100772391 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		85BDCEA71537472100772391 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		85BDCEB915374C5500772391 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		85BDCEBA15374C5500772391 /* CrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathView.h; sourceTree = "<group>"; };
 		85BDCEBB15374C5500772391 /* CrumbPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathView.m; sourceTree = "<group>"; };
+		85DC05B4153766C0007BB8BE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DC05B5153766C0007BB8BE /* MediaPlayer.framework in Frameworks */,
 				85BDCEB615374B8300772391 /* CoreLocation.framework in Frameworks */,
 				85BDCEB01537475800772391 /* MapKit.framework in Frameworks */,
 				85BDCE871537472100772391 /* UIKit.framework in Frameworks */,
@@ -74,6 +77,7 @@
 		85BDCE771537472100772391 = {
 			isa = PBXGroup;
 			children = (
+				85DC05B4153766C0007BB8BE /* MediaPlayer.framework */,
 				85BDCEB515374B8300772391 /* CoreLocation.framework */,
 				85BDCEAF1537475800772391 /* MapKit.framework */,
 				85BDCE8C1537472100772391 /* Raceday */,
