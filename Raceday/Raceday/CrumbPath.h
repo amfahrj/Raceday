@@ -1,7 +1,6 @@
 /*
      File: CrumbPath.h
  Abstract: CrumbPath is an MKOverlay model class representing a path that changes over time.
-  Version: 1.5
  */
 
 #import <MapKit/MapKit.h>
