@@ -8,8 +8,9 @@
 
 #import "SettingsViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "PlaylistViewController.h"
 
-@interface SettingsViewController () <MPMediaPickerControllerDelegate>
+@interface SettingsViewController () <MPMediaPickerControllerDelegate,PlaylistDelegate>
 @property (strong) MPMusicPlayerController *musicPlayer;
 
 @end
@@ -38,6 +39,15 @@
 }
 
 - (IBAction)startRace:(id)sender {
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"ShowPlaylist"])
+    {
+        PlaylistViewController * controller = segue.destinationViewController;
+        controller.delegate = self;
+    }
 }
 
 - (IBAction)browsePlaylist:(id)sender {
@@ -92,5 +102,9 @@
     }
 }
 
+-(void)playlistSelected:(MPMediaPlaylist *)playlist sender:(id)sender
+{
+    self.playlistLabel.text = [playlist valueForProperty: MPMediaPlaylistPropertyName];
+}
 
 @end

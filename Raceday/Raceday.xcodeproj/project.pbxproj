@@ -24,6 +24,7 @@
 		85BDCEB615374B8300772391 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BDCEB515374B8300772391 /* CoreLocation.framework */; };
 		85BDCEBC15374C5500772391 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BDCEB915374C5500772391 /* CrumbPath.m */; };
 		85BDCEBD15374C5500772391 /* CrumbPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BDCEBB15374C5500772391 /* CrumbPathView.m */; };
+		85D52FDE153855C40094502E /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D52FDD153855C40094502E /* PlaylistViewController.m */; };
 		85DC05B5153766C0007BB8BE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DC05B4153766C0007BB8BE /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		85BDCEB915374C5500772391 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		85BDCEBA15374C5500772391 /* CrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathView.h; sourceTree = "<group>"; };
 		85BDCEBB15374C5500772391 /* CrumbPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathView.m; sourceTree = "<group>"; };
+		85D52FDC153855C40094502E /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
+		85D52FDD153855C40094502E /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
 		85DC05B4153766C0007BB8BE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -115,6 +118,8 @@
 				85BDCE951537472100772391 /* RDAppDelegate.h */,
 				85BDCE961537472100772391 /* RDAppDelegate.m */,
 				85BDCE981537472100772391 /* MainStoryboard.storyboard */,
+				85D52FDC153855C40094502E /* PlaylistViewController.h */,
+				85D52FDD153855C40094502E /* PlaylistViewController.m */,
 				85BDCE9B1537472100772391 /* RaceViewController.h */,
 				85BDCE9C1537472100772391 /* RaceViewController.m */,
 				85BDCE9E1537472100772391 /* first.png */,
@@ -213,6 +218,7 @@
 				85BDCEA41537472100772391 /* SettingsViewController.m in Sources */,
 				85BDCEBC15374C5500772391 /* CrumbPath.m in Sources */,
 				85BDCEBD15374C5500772391 /* CrumbPathView.m in Sources */,
+				85D52FDE153855C40094502E /* PlaylistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
