@@ -10,20 +10,21 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "PlaylistViewController.h"
 
-@interface SettingsViewController () <MPMediaPickerControllerDelegate,PlaylistDelegate>
+@interface SettingsViewController () <PlaylistDelegate>
 @property (strong) MPMusicPlayerController *musicPlayer;
-
+@property (strong) MPMediaPlaylist * playlist;
 @end
 
 @implementation SettingsViewController
 @synthesize playlistLabel=_playlistLabel;
 @synthesize musicPlayer=_musicPlayer;
+@synthesize playlist=_playlist;
+
+BOOL playing = NO;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 
 - (void)viewDidUnload
@@ -39,6 +40,11 @@
 }
 
 - (IBAction)startRace:(id)sender {
+    self.musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
+    [self.musicPlayer setQueueWithItemCollection:self.playlist];
+    [self.musicPlayer play];
+    playing = YES;
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -48,17 +54,6 @@
         PlaylistViewController * controller = segue.destinationViewController;
         controller.delegate = self;
     }
-}
-
-- (IBAction)browsePlaylist:(id)sender {
-    MPMediaPickerController *mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
-    
-    mediaPicker.delegate = self;
-    mediaPicker.prompt = @"Choose your song:";
-    mediaPicker.navigationController.toolbar.barStyle = UIBarStyleBlackOpaque;
-    mediaPicker.allowsPickingMultipleItems = YES;
-    
-    [self presentModalViewController:mediaPicker animated:YES];
 }
 
 - (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
@@ -85,15 +80,21 @@
         switch (receivedEvent.subtype) {
                 
             case UIEventSubtypeRemoteControlTogglePlayPause:
-                //[self playOrStop: nil];
+                if (playing) {
+                    [self.musicPlayer stop];
+                }
+                else {
+                    [self.musicPlayer play];
+                }
+                playing = !playing;
                 break;
                 
             case UIEventSubtypeRemoteControlPreviousTrack:
-                //[self previousTrack: nil];
+                [self.musicPlayer skipToPreviousItem];
                 break;
                 
             case UIEventSubtypeRemoteControlNextTrack:
-                //[self nextTrack: nil];
+                [self.musicPlayer skipToNextItem];
                 break;
                 
             default:
@@ -104,6 +105,7 @@
 
 -(void)playlistSelected:(MPMediaPlaylist *)playlist sender:(id)sender
 {
+    self.playlist = playlist;
     self.playlistLabel.text = [playlist valueForProperty: MPMediaPlaylistPropertyName];
 }
 

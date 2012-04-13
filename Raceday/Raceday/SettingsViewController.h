@@ -11,6 +11,5 @@
 @interface SettingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *playlistLabel;
 - (IBAction)startRace:(id)sender;
-- (IBAction)browsePlaylist:(id)sender;
 
 @end
